@@ -1,0 +1,118 @@
+.mainContainer {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #dadada;
+  cursor: pointer;
+  padding: 0 5%;
+  border-bottom: 0.1vmax solid #8888882f;
+}
+
+.navLogo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #dadada;
+}
+
+.navLogo p {
+  margin: 0px;
+  transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.navLogo .copyright {
+  font-size: larger;
+}
+.navLogo .name {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left: 5px;
+  transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.navLogo .name p {
+  position: relative;
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.navLogo .name p:nth-of-type(2) {
+  padding-left: 0.3em;
+}
+.navLogo .name p:nth-of-type(3) {
+  position: absolute;
+  left: 120px;
+  padding-left: 0.3em;
+}
+
+.navLogo:hover .name {
+  padding-right: 30px;
+}
+.navLogo:hover .codeby {
+  transform: translateX(-100%);
+}
+.navLogo:hover .deepak {
+  transform: translateX(-65px);
+}
+.navLogo:hover .patankar {
+  transform: translateX(-65px);
+}
+.navLogo:hover .copyright {
+  transform: rotate(360deg);
+}
+
+.searchContainer {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.searchContainer form {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1vmax;
+}
+.searchContainer form input {
+  width: 85%;
+  height: 100%;
+  padding: 0 2vmax;
+}
+.searchContainer form button {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchContainer form input,
+.searchContainer form button {
+  border: none;
+  outline: none;
+  font-size: 1.2vmax;
+  font-weight: 400;
+  border-radius: 1vmin;
+  background-color: #0000004f;
+  color: #dadada;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .mainContainer {
+    height: 10vmin;
+  }
+  .navLogo .name p:nth-of-type(3) {
+    left: 120px;
+  }
+  .searchContainer form input {
+    width: 75%;
+  }
+  .searchContainer form button {
+    width: 25%;
+  }
+}
